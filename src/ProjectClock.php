@@ -2,10 +2,10 @@
 
 namespace App; 
 
-use Psr\Clock\ClockInterface; 
+use App\CustomClockInterface; 
 use Carbon\Carbon;
 
-final class ProjectClock implements ClockInterface {
+final class ProjectClock implements CustomClockInterface {
 
     private $clock; 
 

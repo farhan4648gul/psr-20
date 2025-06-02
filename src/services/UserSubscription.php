@@ -2,12 +2,12 @@
 
 namespace App\Services; 
 
-use App\ProjectClock;
-use Psr\Clock\ClockInterface;
+
+use App\CustomClockInterface; 
 
 class UserSubscription { 
 
-    public function __construct(public ClockInterface $clock)
+    public function __construct(public CustomClockInterface $clock)
     {
         
     }
@@ -24,6 +24,7 @@ class UserSubscription {
         // Assuming we have a method to get the subscription end date
         $subscriptionEndDate = $this->getSubscriptionEndDate();
         
+        // if ( $this->clock instanceof ProjectClock)
         // Check if the current time is before the subscription end date
         return $this->clock->subtractTime(-10) < $subscriptionEndDate; 
     }
