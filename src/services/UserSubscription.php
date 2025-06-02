@@ -2,11 +2,12 @@
 
 namespace App\Services; 
 
-use App\ProjectClock; 
+use App\ProjectClock;
+use Psr\Clock\ClockInterface;
 
 class UserSubscription { 
 
-    public function __construct(public ProjectClock $clock)
+    public function __construct(public ClockInterface $clock)
     {
         
     }
