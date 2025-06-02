@@ -2,11 +2,13 @@
     "name": "farhan/psr-20-clock",
     "description": "Testing Clock PSR 20",
     "require": {
-        "psr/clock": "^1.0"
+        "psr/clock": "^1.0",
+        "nesbot/carbon": "^3.9"
     },
     "autoload": {
         "psr-4": {
-            "Farhan\\Psr20Clock\\": "src/"
+            "Farhan\\Psr20Clock\\": "src/", 
+            "App\\": "src/" 
         }
     },
     "authors": [
